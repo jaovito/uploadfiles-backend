@@ -1,7 +1,6 @@
 require('dotenv').config()
 
 
-const port = 3000
 const express = require('express')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
@@ -29,4 +28,4 @@ app.use(
 
 app.use(require('./routes'))
 
-app.listen(port, console.log(`BACKEND is running on ${port}`))
+app.listen(process.env.PORT || 3000)
